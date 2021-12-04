@@ -13,26 +13,26 @@ body {
 }
 
 .header {
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   height: 70px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.788);
+  background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 0.1px 10px rgb(0, 0, 0, 0.5);
 }
-h1 {
+h2 {
   color: rgb(83, 83, 255);
 }
-.btn-container button {
-  border: 0;
-  padding: 0;
-  background-color: transparent;
-  font-size: 17px;
-}
-.btn-container button:hover {
+a:hover {
   color: blue;
   transition: 0.4s;
+}
+a {
+  font-size: 17px;
+  text-decoration: none;
+  color: #111;
 }
 
 .container {
@@ -47,9 +47,8 @@ h1 {
   margin: 50px auto;
   background-color: #222;
   min-width: 600px;
-  height: 70px;
   border-radius: 5px;
-  padding: 7px;
+  padding: 0 20px;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -58,7 +57,12 @@ p {
   font-weight: bold;
   font-size: 40px;
   color: #fff;
-  letter-spacing: 10px;
+  letter-spacing: 6px;
+}
+.color {
+  font-weight: bold;
+  font-size: 40px;
+  color: rgb(83, 83, 255);
 }
 .click {
   border-radius: 5px;
@@ -71,9 +75,22 @@ p {
   padding: 10px 15px;
   width: 170px;
   font-weight: bold;
+  align-items: center;
 }
 .click:hover {
   background-color: #222;
   color: #fff;
   transition: 0.6s;
+}
+
+@media only screen and (max-width: 720px) {
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 40px 0;
+  }
+  .click {
+    align-items: center;
+  }
 }
